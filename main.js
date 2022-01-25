@@ -85,3 +85,19 @@ function setPositionByIndex(){
     previousTranslate=currentTranslate;
     setSliderPosition()
 }
+
+const nextbtn=document.getElementById('nextbtn');
+const prevbtn=document.getElementById('prevbtn');
+
+nextbtn.addEventListener('click',()=>{
+    if(currentIndex<slides.length-1){
+    currentIndex++;
+    setPositionByIndex();}
+})
+
+prevbtn.addEventListener('click',()=>{
+    if(currentIndex>0){
+    currentIndex--;
+    setPositionByIndex();}
+})
+
